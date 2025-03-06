@@ -1,0 +1,9 @@
+﻿StageCode,MonsterID,SpawnRate
+Stage_1,201,0.6
+Stage_1,202,0.4
+Stage_1,203,0.3
+Stage_2,201,0.3
+Stage_2,202,0.3
+Stage_2,204,0.4
+Stage_3,204,0.8
+Stage_3,205,0.2

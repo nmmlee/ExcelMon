@@ -1,0 +1,8 @@
+﻿SkillID,Skill_TypeID,Value,Turn_MaxValue,Turn_MinValue
+301,ATTACK,-1,-1,-1
+302,ATTACK,-1,-1,-1
+303,ATTACK,-1,-1,-1
+303,BLEED,0.2,3,3
+304,ATTACK,-1,-1,-1
+305,ATTACK,-1,-1,-1
+305,FREEZE,1,1,1

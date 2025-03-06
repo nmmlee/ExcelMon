@@ -1,0 +1,6 @@
+﻿MonsterID,MonsterName,MonsterAttribute,MonsterType,MonsterMinLevel,MonsterMaxLevel,MonsterImage
+201,물 슬라임,물,Slime,1,10,slime_water.ong
+202,불 슬라임,불,Slime,1,12,slime_fire.png
+203,나무 슬라임,풀,Slime,1,15,slime_grass.png
+204,해골 병사,불,Skeleton,10,20,skeleton.png
+205,냉기의 드래곤,물,Dragon,20,30,dragon_ice.png

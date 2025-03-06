@@ -1,0 +1,6 @@
+﻿SkillID,SkillName,SkillAttribute,SkillLearn_MonsterType,Skill_Image
+301,물방울 공격,물,Slime,water_bubble.png
+302,불덩이 투척,불,Slime,fireball.png
+303,나뭇잎 스을라임,풀,Slime,leaf_cut.png
+304,해골 찌르기,불,Skeleton,skeleton_stab.png
+305,냉기의 브레스,물,Dragon,ice_breath.png
