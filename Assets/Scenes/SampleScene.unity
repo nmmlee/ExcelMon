@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1422332093}
   - component: {fileID: 1422332092}
+  - component: {fileID: 1422332094}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142c9cde97e57484ebed298255417325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsters: []
+  monsterDataSO: {fileID: 11400000, guid: d06e34261d3c6a94c8b1c9ba8398159a, type: 2}
 --- !u!4 &1422332093
 Transform:
   m_ObjectHideFlags: 0
@@ -250,3 +251,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1422332094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422332091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196e8baa8a165624fb0bc31c08339941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDataSO: {fileID: 11400000, guid: fa195b9dd98a7c1408a5ba220aa9b26f, type: 2}

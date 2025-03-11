@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MonsterDatabase : MonoBehaviour
 {
-    public List<MonsterData> monsters = new List<MonsterData>();
+    // SO 파일을 참조하는 변수
+    public MonsterDataSO monsterDataSO;
 
     void Start()
     {
@@ -20,12 +21,13 @@ public class MonsterDatabase : MonoBehaviour
         }
 
         string[] lines = File.ReadAllLines(filePath);
+        List<MonsterData> monsters = new List<MonsterData>();
 
         for (int i = 1; i < lines.Length; i++) // 첫 번째 줄은 헤더라서 건너뜀
         {
             string[] values = lines[i].Split(',');
 
-            if (values.Length < 6) continue; // 데이터 부족하면 스킵
+            if (values.Length < 7) continue; // 데이터 부족하면 스킵
 
             int id = int.Parse(values[0]);
             string name = values[1];
@@ -38,6 +40,8 @@ public class MonsterDatabase : MonoBehaviour
             MonsterData monster = new MonsterData(id, name, attribute, type, minLevel, maxLevel, imageFile);
             monsters.Add(monster);
         }
+
+        monsterDataSO.monsters = monsters;
 
         Debug.Log($"총 {monsters.Count}개의 몬스터 데이터를 로드했습니다.");
     }
