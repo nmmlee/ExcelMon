@@ -42,7 +42,7 @@ public class SkillDatabase : MonoBehaviour
             int manaCost = int.Parse(values[4]);
             string imageFile = values[5];
 
-            SkillData skill = new SkillData(id, name, type, manaCost, imageFile);
+            SkillData skill = new SkillData(id, name, type, monsterType, manaCost, imageFile);
             skills.Add(skill);
         }
 
@@ -84,15 +84,21 @@ public class SkillDatabase : MonoBehaviour
         Debug.Log($"총 {effectMapping.Count}개의 스킬 효과 매핑 데이터를 로드했습니다.");
     }
 
+    public List<SkillData> GetSkillsForMonster(string attribute, string type)
+    {
+        return skillDataSO.skills.FindAll(skill => skill.attribute == attribute && skill.monsterType == type);
+    }
+
     public void PrintSkillEffects(int skillId)
     {
         if (skillDataSO.skillEffects.ContainsKey(skillId))
         {
             Debug.Log($"[스킬 ID {skillId}]의 효과 목록:");
 
+            // skilleffects의 안에 있는 리스트, 그 리스트는 skillmapping 클래스이다. var effect는 해당 클래스 참조
             foreach (var effect in skillDataSO.skillEffects[skillId])
             {
-                Debug.Log($"- 효과 타입: {effect.effectType}, 몬스터 유형 : {effect.effectType}, Value1: {effect.value1}," +
+                Debug.Log($"- 효과 타입: {effect.effectType}, Value1: {effect.value1}," +
                           $"최소 지속 턴: {effect.turnMinValue}, 최대 지속 턴: {effect.turnMaxValue}");
             }
         }

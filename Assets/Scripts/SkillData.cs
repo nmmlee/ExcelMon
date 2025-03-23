@@ -7,15 +7,17 @@ public class SkillData
 {
     public int id;
     public string name;
-    public string type;
+    public string attribute;
+    public string monsterType;
     public int manaCost;
     public string imageFile;
 
-    public SkillData(int id, string name, string type, int manaCost, string imageFile)
+    public SkillData(int id, string name, string attribute, string monsterType, int manaCost, string imageFile)
     {
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.attribute = attribute;
+        this.monsterType = monsterType;
         this.manaCost = manaCost;
         this.imageFile = imageFile;
     }
